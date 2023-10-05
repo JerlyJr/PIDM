@@ -1,4 +1,4 @@
-import { Text, View, SectionList, StyleSheet } from "react-native";
+import { Text, View, SectionList, StyleSheet, Button } from "react-native";
 import DadosCompra from "./dados";
 
 const Questão01 = () =>{
@@ -8,11 +8,15 @@ const Questão01 = () =>{
             sections={DadosCompra}
             renderItem={({item}) => (
                 
+                <View>
+                    <Button 
+                    title="abrir"
+                    />
                 <View style={styles.item}>
-                    
                     <Text style={styles.title}>{item.nome}</Text>
                     <Text style={styles.valor}>{item.valor}</Text>
                     <Text style={styles.hora}>{item.hora}</Text>
+                </View>
                 </View>
             )}
             renderSectionHeader={({section: {title}}) => (
